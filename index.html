@@ -156,25 +156,35 @@
             position: relative;
         }
 
-        .book-cover-container {
+        /* تصميم برواز احترافي بدلاً من الصورة */
+        .book-cover-placeholder {
             width: 100%;
+            height: 380px;
             border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #1a1a24 0%, #0b0b0e 100%);
             border: 1px solid var(--border-color);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            background: #0b0b0e;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            text-align: center;
         }
 
-        .book-cover-container img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            display: block;
+        .book-cover-placeholder h3 {
+            font-size: 20px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .book-cover-placeholder p {
+            font-size: 13px;
+            color: var(--accent-color);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .price-tag {
@@ -401,16 +411,18 @@
                 <button class="cta-btn open-checkout">Get Instant Access ($14.99)</button>
             </div>
 
-           <div class="book-preview-card">
-    <div class="book-cover-container">
-        <img src="ChatGPT Image Sep 1, 2026, 02_01_45 PM" alt="The Hidden Algorithm Cover" style="width: 100%; display: block;">
-    </div>
+            <div class="book-preview-card">
+                <!-- تم استبدال الصورة ببرواز تصميم أنيق متناسق -->
+                <div class="book-cover-placeholder">
+                    <h3>THE HIDDEN ALGORITHM</h3>
+                    <p>The Ultimate Playbook</p>
+                </div>
 
-    <div class="price-tag">$14.99 <span>$39.99</span></div>
-    
-    <button class="cta-btn open-checkout" style="width: 100%; display: block; text-align: center;">Buy on Gumroad</button>
-    <p style="font-size: 12px; margin-top: 15px; color: var(--text-muted);">Secure payment via Gumroad. Instant download.</p>
-</div>
+                <div class="price-tag">$14.99 <span>$39.99</span></div>
+                
+                <button class="cta-btn open-checkout" style="width: 100%; display: block; text-align: center;">Buy on Gumroad</button>
+                <p style="font-size: 12px; margin-top: 15px; color: var(--text-muted);">Secure payment via Gumroad. Instant download.</p>
+            </div>
         </section>
 
         <!-- What You Will Learn -->
