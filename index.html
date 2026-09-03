@@ -6,7 +6,7 @@
     <title>The Hidden Algorithm | The Ultimate Faceless YouTube Playbook</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- سكربت جومرود الرسمي للـ Overlay الآمن داخل الموقع -->
+    <!-- سكربت جومرود الرسمي -->
     <script src="https://gumroad.com/js/gumroad.js"></script>
 
     <style>
@@ -140,6 +140,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 25px rgba(0, 240, 255, 0.4);
             cursor: pointer;
+            border: none;
         }
 
         .cta-btn:hover {
@@ -166,10 +167,18 @@
             margin-bottom: 20px;
             border: 1px solid var(--border-color);
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            background: #0b0b0e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
+        /* تنسيق الصورة المربعة الجديدة (1:1) بشكل مثالي */
         .book-cover-container img {
             width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
             display: block;
         }
 
@@ -203,7 +212,7 @@
             color: var(--accent-color);
         }
 
-        /* What You Will Learn Grid */
+        /* Features Grid */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -323,15 +332,19 @@
                 <div class="badge">UPDATED FOR 2026 ALGORITHM</div>
                 <h1>THE HIDDEN ALGORITHM: <span>Build a Faceless Empire with AI</span></h1>
                 <p>The definitive blueprint for launching, scaling, and safely monetizing automated YouTube channels using advanced AI workflows, high-retention hooks, and strict compliance strategies.</p>
+                
+                <!-- زر جومرود لشراء المنتج -->
                 <a class="cta-btn" href="https://punchfunky.gumroad.com/l/skxvfm">Get Instant Access ($14.99)</a>
             </div>
+
             <div class="book-preview-card">
-                <!-- تأكد أن صورة الغلاف موجودة في نفس الفولتر ومسماتها cover.png -->
+                <!-- عرض الصورة المربعة الجديدة -->
                 <div class="book-cover-container">
-                    <img src="cover.png" alt="The Hidden Algorithm Cover">
+                    <img src="gumroad_thumbnail.png" alt="The Hidden Algorithm Cover" onerror="this.onerror=null; this.src='https://assets.gumroad.com/assets/missing_product_image-40a23250fd214a1f6a19f658db4fa59d64380a149c0c32608447814470bc5538.png';">
                 </div>
 
                 <div class="price-tag">$14.99 <span>$39.99</span></div>
+                
                 <a class="cta-btn" href="https://punchfunky.gumroad.com/l/skxvfm" style="width: 100%; display: block; text-align: center;">Buy on Gumroad</a>
                 <p style="font-size: 12px; margin-top: 15px; color: var(--text-muted);">Secure payment via Gumroad. Instant download.</p>
             </div>
