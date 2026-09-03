@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hidden Algorithm | The Ultimate Faceless YouTube Playbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0b0e;
+            --card-bg: #141419;
+            --accent-red: #00f0ff;
+            --accent-hover: #00c4d1;
+            --text-main: #ffffff;
+            --text-muted: #a0a0ab;
+            --border-color: #262633;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(11, 11, 14, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: var(--accent-red);
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 40px;
+            padding: 60px 0;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 42, 42, 0.1);
+            color: var(--accent-red);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 42, 42, 0.2);
+        }
+
+        .hero-content h1 {
+            font-size: clamp(32px, 4vw, 50px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent-red);
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-red);
+            color: var(--text-main);
+            padding: 16px 36px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 25px rgba(0, 240, 255, 0.4);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(0, 240, 255, 0.6);
+        }
+
+        .book-preview-card {
+            flex: 0.8;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            text-align: center;
+            position: relative;
+        }
+
+        .book-preview-card h3 {
+            color: var(--accent-red);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .book-preview-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .price-tag {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .price-tag span {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section h2 {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        section h2 span {
+            color: var(--accent-red);
+        }
+
+        /* What You Will Learn Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 35px;
+            border-radius: 12px;
+            transition: border-color 0.3s;
+        }
+
+        .feature-item:hover {
+            border-color: var(--accent-red);
+        }
+
+        .feature-item h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Chapters Breakdown */
+        .chapters-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .chapter-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px 25px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-num {
+            color: var(--accent-red);
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .chapter-title {
+            font-size: 16px;
+            font-weight: 600;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .faq-item h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">GHOST CHANNEL</div>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">What's Inside</a></li>
+            <li><a href="#chapters">Chapters</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="YOUR_GUMROAD_LINK_HERE" class="cta-btn" style="padding: 10px 20px; font-size: 14px;" target="_blank">Get Access</a>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="overview" style="border: none; padding-top: 20px;">
+            <div class="hero-content">
+                <div class="badge">UPDATED FOR 2026 ALGORITHM</div>
+                <h1>THE HIDDEN ALGORITHM: <span>Build a Faceless Empire with AI</span></h1>
+                <p>The definitive blueprint for launching, scaling, and safely monetizing automated YouTube channels using advanced AI workflows, high-retention hooks, and strict compliance strategies.</p>
+                <a href="YOUR_GUMROAD_LINK_HERE" class="cta-btn" target="_blank">Get Instant Access ($19)</a>
+            </div>
+            <div class="book-preview-card">
+                <h3>THE HIDDEN ALGORITHM</h3>
+                <p>Digital E-Book (PDF + Bonus Checklists)</p>
+                <div class="price-tag">$19 <span>$49</span></div>
+                <a href="YOUR_GUMROAD_LINK_HERE" class="cta-btn" style="width: 100%; display: block; text-align: center;" target="_blank">Buy on Gumroad</a>
+                <p style="font-size: 12px; margin-top: 15px; color: var(--text-muted);">Secure payment via Gumroad. Instant download.</p>
+            </div>
+        </section>
+
+        <!-- What You Will Learn -->
+        <section id="features">
+            <h2>What You Will <span>Master</span> Inside</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>🤖 Advanced AI Prompts</h3>
+                    <p>Unlock precise prompting architectures to generate viral scripts, engaging hooks, and unique video concepts in minutes.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🛡️ Strict Compliance</h3>
+                    <p>Learn how to bypass YouTube's 'inauthentic content' filters and automated AI flags to secure long-term monetization.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📈 High-CTR Formulas</h3>
+                    <p>Master psychological thumbnail design and retention loops that lock viewers to the screen from second one to the end.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapters Breakdown -->
+        <section id="chapters">
+            <h2>Inside The <span>Playbook</span> (Chapters)</h2>
+            <div class="chapters-list">
+                <div class="chapter-card">
+                    <span class="chapter-num">01</span>
+                    <span class="chapter-title">The New Era of Faceless Channels & AI Ecosystems</span>
+                </div>
+                <div class="chapter-card">
+                    <span class="chapter-num">02</span>
+                    <span class="chapter-title">Niche Selection & Profitable Market Research</span>
+                </div>
+                <div class="chapter-card">
+                    <span class="chapter-num">03</span>
+                    <span class="chapter-title">Advanced Scriptwriting & High-Retention Hook Frameworks</span>
+                </div>
+                <div class="chapter-card">
+                    <span class="chapter-num">04</span>
+                    <span class="chapter-title">Voice Cloning, Editing Automation & Production Flow</span>
+                </div>
+                <div class="chapter-card">
+                    <span class="chapter-num">05</span>
+                    <span class="chapter-title">Navigating YouTube 2026 Monetization & Compliance Rules</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" style="border: none;">
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>What format is the book?</h4>
+                    <p>The book is delivered as a high-quality, beautifully designed PDF that you can read on any device (Phone, Tablet, PC).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do I need prior experience with AI or video editing?</h4>
+                    <p>Not at all! The playbook is structured from absolute scratch to advanced automation workflows, perfect for beginners and intermediate creators.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do I get the book after purchase?</h4>
+                    <p>Once you complete your payment securely on Gumroad, you will get an instant download link to access your files right away.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ghost Channel System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
